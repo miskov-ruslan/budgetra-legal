@@ -50,14 +50,17 @@
 </div>
 <pre>Privacy Policy
 
-Last updated: June 16, 2026
+Last updated: September 17, 2026
 
-Budgetra ("we", "our", or "us") is a personal finance application for iOS. This Privacy Policy explains what data we collect, how we use it, and your rights.
+Budgetra ("we", "our", or "us") is a personal finance application for iOS and Android. This Privacy Policy explains what data we collect, how we use it, and your rights.
 
 1. Data We Collect
 
 Financial Data
 All your financial data — expenses, income, budgets, goals, and categories — is stored exclusively on your device using an encrypted local database. We do not collect, transmit, or have access to your financial data.
+
+Voice Input
+Voice entry of expenses is an optional feature. When you use it, the audio recording and its recognized text are sent to our secure cloud functions (Google Cloud Functions) and a speech-recognition provider solely to process your command, and are then deleted immediately and never stored. The spoken phrase may contain an amount or a description of a purchase; only the names of your categories and goals are sent alongside it — never amounts, limits, or balances. You can always enter expenses manually without using voice.
 
 Analytics Data
 We use Firebase Analytics (Google LLC) to collect anonymous usage statistics, such as which features are used and how the app performs. This data does not include personal identification or financial information.
@@ -66,7 +69,7 @@ Crash Reports
 We use Firebase Crashlytics (Google LLC) to automatically collect crash reports when the app unexpectedly closes. These reports help us fix bugs. Crash reports do not contain your financial data.
 
 Subscription Data
-If you purchase Budgetra Pro, your subscription is managed by Apple App Store. We receive only a confirmation of purchase status — no payment or personal billing information.
+If you purchase Budgetra Pro, your subscription is processed by your device's app store — Apple App Store (iOS) or Google Play (Android). To manage subscription status we use RevenueCat (RevenueCat, Inc.), which receives an anonymized purchase identifier and its status — no payment or personal billing information.
 
 2. How We Use Your Data
 
@@ -79,14 +82,17 @@ We never use your data for advertising, profiling, or marketing.
 
 3. Third-Party Services
 
-The following services have access to anonymized app usage data:
+The following services process anonymized or ephemeral (non-stored) data:
 • Firebase Analytics (Google LLC) — usage statistics
 • Firebase Crashlytics (Google LLC) — crash reports
-• Apple App Store — subscription management
+• Google Cloud Functions (Google LLC) — voice input processing
+• Speech-recognition provider — recognition of voice commands (audio and text are not stored)
+• Apple App Store / Google Play — subscription management
+• RevenueCat (RevenueCat, Inc.) — subscription status management
 
 4. Data Storage and Security
 
-Your financial data is stored locally on your device using an encrypted database (SQLCipher). It is never transmitted to our servers or any third party. You are responsible for the security of your device.
+Your financial data is stored locally on your device using an encrypted database (SQLCipher). It is never transmitted to our servers or any third party. The only exception is voice input: when you use it, the audio and recognized text are transmitted transiently for processing (see "Voice Input" in section 1) and are not retained afterward. You are responsible for the security of your device.
 
 5. Your Rights (GDPR)
 
