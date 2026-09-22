@@ -50,14 +50,24 @@
 </div>
 <pre>Privacy Policy
 
-Last updated: September 17, 2026
+Last updated: September 23, 2026
 
 Budgetra ("we", "our", or "us") is a personal finance application for iOS and Android. This Privacy Policy explains what data we collect, how we use it, and your rights.
 
 1. Data We Collect
 
 Financial Data
-All your financial data — expenses, income, budgets, goals, and categories — is stored exclusively on your device using an encrypted local database. We do not collect, transmit, or have access to your financial data.
+All your financial data — expenses, income, budgets, goals, and categories — is stored on your device using an encrypted local database. We do not collect, transmit to our servers, or have access to your financial data.
+
+Backups
+Budgetra can make automatic backups of your data. Every backup — including its receipt photos — is encrypted on your device with a backup password that only you know (AES-256-GCM, with the key derived from your password using PBKDF2). We never receive your backups or your backup password, and without the password nobody, including us and the storage provider, can read them.
+• iOS: backups are stored in your own iCloud Drive (Apple).
+• Android: backups are stored on your device. Optionally, you can connect your Google account to keep a copy in your own Google Drive, so your backups survive reinstalling the app or switching phones.
+
+Google Drive (Android, optional)
+If you connect Google Drive, Budgetra requests only the "drive.appdata" permission. It lets the app store and read its own files in a hidden, app-specific folder of your Google Drive; the app cannot see, open, or change any other files in your Drive. Budgetra uses this access solely to upload, download, and remove its own encrypted backups (older backups are removed automatically, on the same schedule as on your device). The email address of the connected Google account is kept only on your device to show which account is connected and is never sent to us. Sign-in and access tokens are handled by Google Sign-In on your device.
+You can disconnect Google Drive at any time in Settings → Backups; this stops syncing and deletes nothing. To delete the backups stored in Google Drive, open Google Drive → Settings → Manage apps → Budgetra → Delete hidden app data. You can also revoke Budgetra's access at https://myaccount.google.com/permissions.
+Budgetra's use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy (https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.
 
 Voice Input
 Voice entry of expenses is an optional feature. When you use it, the audio recording and its recognized text are sent to our secure cloud functions (Google Cloud Functions) and a speech-recognition provider solely to process your command, and are then deleted immediately and never stored. The spoken phrase may contain an amount or a description of a purchase; only the names of your categories and goals are sent alongside it — never amounts, limits, or balances. You can always enter expenses manually without using voice.
@@ -82,23 +92,25 @@ We never use your data for advertising, profiling, or marketing.
 
 3. Third-Party Services
 
-The following services process anonymized or ephemeral (non-stored) data:
+The following services process anonymized or ephemeral (non-stored) data, or store your encrypted backups in your own account at your request:
 • Firebase Analytics (Google LLC) — usage statistics
 • Firebase Crashlytics (Google LLC) — crash reports
 • Google Cloud Functions (Google LLC) — voice input processing
 • Speech-recognition provider — recognition of voice commands (audio and text are not stored)
 • Apple App Store / Google Play — subscription management
 • RevenueCat (RevenueCat, Inc.) — subscription status management
+• Apple iCloud Drive — storage of your encrypted backups in your own iCloud account (iOS)
+• Google Drive and Google Sign-In (Google LLC) — optional storage of your encrypted backups in your own Google account (Android)
 
 4. Data Storage and Security
 
-Your financial data is stored locally on your device using an encrypted database (SQLCipher). It is never transmitted to our servers or any third party. The only exception is voice input: when you use it, the audio and recognized text are transmitted transiently for processing (see "Voice Input" in section 1) and are not retained afterward. You are responsible for the security of your device.
+Your financial data is stored locally on your device using an encrypted database (SQLCipher). It is never transmitted to our servers. Data leaves your device only in two cases: voice input, when the audio and recognized text are transmitted transiently for processing and are not retained afterward (see "Voice Input" in section 1); and backups, which are stored in your own iCloud Drive or Google Drive and are always encrypted with your backup password beforehand (see "Backups" in section 1). You are responsible for the security of your device and of your backup password: if you forget it, your backups cannot be restored.
 
 5. Your Rights (GDPR)
 
 If you are located in the European Economic Area, you have the right to:
 • Access your personal data
-• Delete your data (by deleting the app)
+• Delete your data (by deleting the app and, if you use cloud backups, by deleting them from iCloud Drive or Google Drive — see section 1)
 • Withdraw analytics consent (App Settings → Privacy)
 • Lodge a complaint with a supervisory authority
 
