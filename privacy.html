@@ -50,7 +50,7 @@
 </div>
 <pre>Privacy Policy
 
-Last updated: October 22, 2026
+Last updated: November 16, 2026
 
 Budgetra ("we", "our", or "us") is a personal finance application for iOS and Android. This Privacy Policy explains what data we collect, how we use it, and your rights.
 
@@ -70,7 +70,8 @@ You can disconnect Google Drive at any time in Settings → Backups; this stops 
 Budgetra's use and transfer of information received from Google APIs adheres to the Google API Services User Data Policy (https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.
 
 Voice Input
-Voice entry of expenses is an optional feature. When you use it, the audio recording and its recognized text are sent to our secure cloud functions (Google Cloud Functions) and a speech-recognition provider solely to process your command, and are then deleted immediately and never stored. The spoken phrase may contain an amount or a description of a purchase; only the names of your categories and goals are sent alongside it — never amounts, limits, or balances. You can always enter expenses manually without using voice.
+Voice entry of expenses is an optional feature, and it works only after you agree to it. Before your first recording the app shows what is sent and to whom and asks for your permission; you can withdraw it at any time in Settings → AI processing of voice.
+When you use it, the audio recording and its recognized text are sent through our cloud functions (Google Cloud Functions, Google LLC) to a third-party AI service, Groq, Inc., which recognizes your speech and interprets the phrase with an AI model, solely to turn your command into an expense or income. We do not store the recording or the text. The spoken phrase may contain an amount or a description of a purchase; only the names of your categories and goals are sent alongside it — never amounts, limits, or balances. Groq handles the data it receives under its own privacy policy (https://groq.com/privacy-policy). You can always enter expenses manually without using voice.
 
 Analytics Data
 We use Firebase Analytics (Google LLC) to collect anonymous usage statistics, such as which features are used and how the app performs. This data does not include personal identification or financial information.
@@ -96,7 +97,7 @@ The following services process anonymized or ephemeral (non-stored) data, or sto
 • Firebase Analytics (Google LLC) — usage statistics
 • Firebase Crashlytics (Google LLC) — crash reports
 • Google Cloud Functions (Google LLC) — voice input processing
-• Speech-recognition provider — recognition of voice commands (audio and text are not stored)
+• Groq, Inc. — third-party AI service: speech recognition and AI interpretation of voice commands, only with your consent (we do not store the audio or the text)
 • Apple App Store / Google Play — subscription management
 • RevenueCat (RevenueCat, Inc.) — subscription status management
 • Apple iCloud Drive — storage of your encrypted backups in your own iCloud account (iOS)
@@ -104,7 +105,7 @@ The following services process anonymized or ephemeral (non-stored) data, or sto
 
 4. Data Storage and Security
 
-Your financial data is stored locally on your device using an encrypted database (SQLCipher). It is never transmitted to our servers. Data leaves your device only in two cases: voice input, when the audio and recognized text are transmitted transiently for processing and are not retained afterward (see "Voice Input" in section 1); and backups, which are stored in your own iCloud Drive or Google Drive and are always encrypted with your backup password beforehand (see "Backups" in section 1). You are responsible for the security of your device and of your backup password: if you forget it, your backups cannot be restored.
+Your financial data is stored locally on your device using an encrypted database (SQLCipher). It is never transmitted to our servers. Data leaves your device only in two cases: voice input, when — with your consent — the audio and recognized text are transmitted to a third-party AI service for processing and are not stored by us (see "Voice Input" in section 1); and backups, which are stored in your own iCloud Drive or Google Drive and are always encrypted with your backup password beforehand (see "Backups" in section 1). You are responsible for the security of your device and of your backup password: if you forget it, your backups cannot be restored.
 
 5. Your Rights (GDPR)
 
